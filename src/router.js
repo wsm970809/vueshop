@@ -13,16 +13,19 @@ const router = new Router({
             path: '/login',
             component: Login
         },
-        { path: '/home', component: Home }
+        {
+            path: '/home',
+            component: Home
+        }
     ]
 })
 
-//挂载路由导航守卫,to表示将要访问的路径，from表示从哪里来，next是下一个要做的操作
+// 挂载路由导航守卫,to表示将要访问的路径，from表示从哪里来，next是下一个要做的操作
 router.beforeEach((to, from, next) => {
-    if (to.path == '/login') {
+    if (to.path === '/login') {
         return next()
     }
-    const tokenstr = window.sessionStorage.getItem('token');
+    const tokenstr = window.sessionStorage.getItem('token')
     if (!tokenstr) {
         return next('/login')
     }
