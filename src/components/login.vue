@@ -137,11 +137,6 @@ export default {
     },
     resetForm (formName) {
       this.$refs[formName].resetFields()
-    },
-    open (title, message) {
-      this.$alert(message, title, {
-        confirmButtonText: '确定'
-      })
     }
   }
 }
