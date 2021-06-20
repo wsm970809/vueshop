@@ -132,7 +132,7 @@
       </el-form>
     </el-dialog>
     <!-- 分配角色的对话框 -->
-    <el-dialog title="分配角色" :visible.sync="isrolUser" width="50%" @close="rolUserClosed">
+    <!-- <el-dialog title="分配角色" :visible.sync="isrolUser" width="50%" @close="rolUserClosed">
       <div>
         <p>当前的用户：{{userInfo.username}}</p>
         <p>当前的角色：{{userInfo.role_name}}</p>
@@ -152,7 +152,7 @@
         <el-button @click="setRoleDialogVisible = false">取 消</el-button>
         <el-button type="primary" @click="saveRoleInfo">确 定</el-button>
       </span>
-    </el-dialog>
+    </el-dialog> -->
   </div>
 </template>
 <style lang="less" scoped>
